@@ -20,13 +20,13 @@ export function ThemeButton({
   };
   return (
     <button
-      className={`rounded-full py-[1.09em] whitespace-nowrap px-[1.8em] flex items-center justify-center cursor-pointer border group duration-300 ${className} ${buttonStyles[variant]}`}
+      className={`rounded-full py-[1em] whitespace-nowrap px-[1.8em] flex items-center justify-center cursor-pointer border group duration-300 ${className} ${buttonStyles[variant]}`}
       {...props}
     >
       {children}
       {withIcon ? (
         <RightArrowIcon
-          className={`ms-2 group-hover:ms-4 group-hover:-rotate-45 origin-top duration-300`}
+          className={`ms-2 group-hover:ms-4 group-hover:-rotate-45 origin-top duration-300 size-[1.4em]!`}
         />
       ) : null}
     </button>

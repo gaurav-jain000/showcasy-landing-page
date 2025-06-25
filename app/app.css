@@ -11,7 +11,6 @@
 
 html,
 body {
-  font-size: 18px;
   @apply bg-white dark:bg-neutral-950;
 
   @media (prefers-color-scheme: dark) {
@@ -136,87 +135,87 @@ body {
 }
 
 .maximus {
-  @apply px-4 md:px-12 max-w-7xl mx-auto;
+  @apply px-4 md:px-8 max-w-[1250px] mx-auto;
 }
 
 .uni-padding-y {
-  @apply py-6;
+  @apply py-[40px] lg:py-[72px];
 }
 .uni-padding-b {
-  @apply pb-6;
+  @apply pb-[40px] lg:pb-[72px];
 }
 .uni-padding-t {
-  @apply pt-6;
+  @apply pt-[40px] lg:pt-[72px];
 }
 
 .theme-h1 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[3.25rem] xl:text-[5.78rem] font-bold;
+  @apply text-[58.5px] lg:text-[104px] font-bold;
 }
 
 .theme-h2 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[3.11rem] xl:text-[4rem] font-semibold;
+  @apply text-[56px] lg:text-[72px] font-semibold;
 }
 
 .theme-h3 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[2.67rem] xl:text-[3.56rem] font-semibold;
+  @apply text-[48px] lg:text-[64px] font-semibold;
 }
 
 .theme-h4 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[2.22rem] xl:text-[3.11rem] font-semibold;
+  @apply text-[40px] lg:text-[56px] font-semibold;
 }
 
 .theme-h5 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[1.78rem] xl:text-[2.22rem] font-semibold;
+  @apply text-[32px] lg:text-[40px] font-semibold;
 }
 
 .theme-h6 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[1.56rem] xl:text-[1.78rem];
+  @apply text-[28px] lg:text-[32px] font-semibold;
 }
 
 .body-28 {
   line-height: 120% !important;
-  letter-spacing: 3%;
-  font-size: 1.56rem !important;
+  letter-spacing: 3% !important;
+  font-size: 28px !important;
 }
 
 .body-22 {
   line-height: 130% !important;
-  letter-spacing: 2%;
-  font-size: 1.22rem !important;
+  letter-spacing: 2% !important;
+  font-size: 22px !important;
 }
 
 .body-18 {
   line-height: 150% !important;
-  letter-spacing: 2%;
-  font-size: 1rem !important;
+  letter-spacing: 2% !important;
+  font-size: 18px !important;
 }
 
 .body-16 {
   line-height: 150% !important;
-  letter-spacing: 2%;
-  font-size: 0.89rem !important;
+  letter-spacing: 2% !important;
+  font-size: 16px !important;
 }
 
 .body-14 {
   line-height: 150% !important;
-  letter-spacing: 1%;
-  font-size: 0.78rem !important;
+  letter-spacing: 1% !important;
+  font-size: 14px !important;
 }
 
 .body-12 {
   line-height: 150% !important;
-  letter-spacing: 1%;
-  font-size: 0.67rem !important;
+  letter-spacing: 1% !important;
+  font-size: 12px !important;
 }
