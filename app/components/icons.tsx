@@ -1,4 +1,4 @@
-export function LeftArrowIcon({ className }: { className?: string }) {
+export function RightArrowIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +56,48 @@ export function MenuIcon({ className }: { className?: string }) {
           d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"
         ></path>
       </g>
+    </svg>
+  );
+}
+
+export function CrossIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.6em"
+      height="1.6em"
+      className={className}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
+      ></path>
+    </svg>
+  );
+}
+
+export function TopRightArrowIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.6em"
+      height="1.6em"
+      className={className}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M7 7h10m0 0v10m0-10L7 17"
+      ></path>
     </svg>
   );
 }

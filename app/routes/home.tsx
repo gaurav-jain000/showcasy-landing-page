@@ -1,6 +1,4 @@
-import { LeftArrowIcon } from "~/components/icons";
 import type { Route } from "./+types/home";
-import { Button } from "~/components/ui/button";
 import { ThemeButton } from "~/components/theme-buttons";
 
 export function meta({}: Route.MetaArgs) {
@@ -18,7 +16,7 @@ export function loader({ context }: Route.LoaderArgs) {
 export default function Home() {
   return (
     <>
-      <section className="maximus py-[40px] md:py-[72px] gap-2 min-h-screen grid place-items-center">
+      <section className="maximus py-[40px] lg:py-[72px] gap-2 min-h-screen grid place-items-center">
         <div className="flex flex-col gap-2">
           <span className="body-28 font-medium">Hello, I&apos;m Ivan.</span>
           <h1 className="theme-h1 leading-[1em] font-bold">

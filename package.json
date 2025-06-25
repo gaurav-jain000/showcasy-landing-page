@@ -11,6 +11,7 @@
   "dependencies": {
     "@netlify/functions": "^3.1.10",
     "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@react-router/node": "^7.5.3",
     "class-variance-authority": "^0.7.1",
@@ -20,7 +21,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.5.3",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@mjackson/node-fetch-server": "0.6.1",

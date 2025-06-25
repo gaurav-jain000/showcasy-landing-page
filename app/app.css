@@ -152,37 +152,37 @@ body {
 .theme-h1 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[3.25rem] lg:text-[5.78rem] font-bold;
+  @apply text-[3.25rem] xl:text-[5.78rem] font-bold;
 }
 
 .theme-h2 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[3.11rem] lg:text-[4rem] font-semibold;
+  @apply text-[3.11rem] xl:text-[4rem] font-semibold;
 }
 
 .theme-h3 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[2.67rem] lg:text-[3.56rem] font-semibold;
+  @apply text-[2.67rem] xl:text-[3.56rem] font-semibold;
 }
 
 .theme-h4 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[2.22rem] lg:text-[3.11rem] font-semibold;
+  @apply text-[2.22rem] xl:text-[3.11rem] font-semibold;
 }
 
 .theme-h5 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[1.78rem] lg:text-[2.22rem] font-semibold;
+  @apply text-[1.78rem] xl:text-[2.22rem] font-semibold;
 }
 
 .theme-h6 {
   line-height: 1 !important;
   letter-spacing: -2% !important;
-  @apply text-[1.56rem] lg:text-[1.78rem];
+  @apply text-[1.56rem] xl:text-[1.78rem];
 }
 
 .body-28 {
