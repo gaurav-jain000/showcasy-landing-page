@@ -135,7 +135,7 @@ body {
 }
 
 .maximus {
-  @apply px-4 md:px-8 max-w-[1250px] mx-auto;
+  @apply px-4 md:px-8 max-w-[1200px] mx-auto;
 }
 
 .uni-padding-y {

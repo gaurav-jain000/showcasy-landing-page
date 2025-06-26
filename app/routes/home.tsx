@@ -8,6 +8,7 @@ import {
 } from "~/components/ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { ThumbnailCarousel } from "~/components/thumbnail-carousel";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -61,25 +62,25 @@ export default function Home() {
               title: "Sportly",
               featured_img_url: "",
               category: "Mobile App Design",
-              full_page_url: "#",
+              full_page_url: "/",
             },
             {
               title: "Payrole",
               featured_img_url: "",
               category: "Website Design",
-              full_page_url: "#",
+              full_page_url: "/",
             },
             {
               title: "Wepay",
               featured_img_url: "",
               category: "Mobile App Design",
-              full_page_url: "#",
+              full_page_url: "/",
             },
             {
               title: "Estatery",
               featured_img_url: "",
               category: "Website Design",
-              full_page_url: "#",
+              full_page_url: "/",
             },
           ].map((work) => (
             <div className="flex flex-col gap-5" key={work.title}>
@@ -87,13 +88,13 @@ export default function Home() {
               <div className="flex items-center justify-between gap-4 w-full">
                 <div className="space-y-2">
                   <h3 className="body-22 font-semibold">{work.title}</h3>
-                  <p className="body-18 font-normal text-neutral-500">
-                    {work.category}
-                  </p>
+                  <p className="body-18 text-neutral-500">{work.category}</p>
                 </div>
-                <ThemeButton variant="outline" withIcon={false}>
-                  <RightArrowIcon className="size-[1.5em]!" />
-                </ThemeButton>
+                <Link to={work.full_page_url}>
+                  <ThemeButton variant="outline" withIcon={false}>
+                    <RightArrowIcon className="size-[1.5em]!" />
+                  </ThemeButton>
+                </Link>
               </div>
             </div>
           ))}
@@ -249,6 +250,63 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+      {/* Insights */}
+      <section className="maximus uni-padding-y">
+        <div className="flex items-center justify-between mb-9 w-full">
+          <h2 className="theme-h5">Insights</h2>
+          <ThemeButton
+            variant="outline"
+            className="max-sm:hidden body-16 font-semibold"
+          >
+            View All Insights
+          </ThemeButton>
+        </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-10">
+          {[
+            {
+              title:
+                "Mastering the Art of Color Theory: A Visual Designer's Guide",
+              featured_img_url: "",
+              desc: "Dive into the fascinating world of color theory and learn how to create captivating visual designs by understanding the principles of color harmonies, psychology, and combinations.",
+              full_page_url: "/",
+            },
+            {
+              title:
+                "Designing for User Experience: Creating Intuitive and Engaging Interfaces",
+              featured_img_url: "",
+              desc: "Explore the realm of user experience (UX) design and discover how to craft interfaces that are not only aesthetically pleasing but also intuitive and engaging for users.",
+              full_page_url: "/",
+            },
+            {
+              title:
+                "The Power of Typography in Visual Design: Enhancing Communication and Impact",
+              featured_img_url: "",
+              desc: "Uncover the significance of typography in visual design and learn how to leverage its power to effectively communicate messages and evoke emotions. This blog post will cover typography fundamentals, font pairing, contrasts, and much more.",
+              full_page_url: "/",
+            },
+          ].map((insight) => (
+            <Link to={insight.full_page_url} key={insight.title}>
+              <div className="flex flex-col gap-5">
+                <div className="aspect-[1.05/1] md:aspect-[1/1.21] bg-gradient-to-br from-neutral-100 to-neutral-200 w-full rounded-2xl"></div>
+                <div className="flex gap-2 flex-col">
+                  <h3 className="body-22 font-semibold line-clamp-3 pe-4">
+                    {insight.title}
+                  </h3>
+                  <p className="body-18 text-neutral-700 line-clamp-2">
+                    {insight.desc}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <ThemeButton
+          variant="outline"
+          className="sm:hidden body-16 font-semibold mt-8 w-full"
+        >
+          View All Insights
+        </ThemeButton>
       </section>
     </>
   );
