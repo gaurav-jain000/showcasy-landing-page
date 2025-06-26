@@ -135,7 +135,7 @@ body {
 }
 
 .maximus {
-  @apply px-4 md:px-8 max-w-[1200px] mx-auto;
+  @apply px-5 md:px-8 max-w-[1200px] mx-auto;
 }
 
 .uni-padding-y {
@@ -150,72 +150,66 @@ body {
 
 .theme-h1 {
   line-height: 1 !important;
-  letter-spacing: -2% !important;
-  @apply text-[58.5px] lg:text-[104px] font-bold;
+  @apply text-[58.5px] lg:text-[104px] -tracking-[0.117px] lg:-tracking-[0.208px] font-bold;
 }
 
 .theme-h2 {
   line-height: 1 !important;
-  letter-spacing: -2% !important;
-  @apply text-[56px] lg:text-[72px] font-semibold;
+  @apply text-[56px] lg:text-[72px] -tracking-[0.112px] lg:-tracking-[0.144px] font-semibold;
 }
 
 .theme-h3 {
   line-height: 1 !important;
-  letter-spacing: -2% !important;
-  @apply text-[48px] lg:text-[64px] font-semibold;
+  @apply text-[48px] lg:text-[64px] -tracking-[0.96px] lg:-tracking-[0.128px] font-semibold;
 }
 
 .theme-h4 {
   line-height: 1 !important;
-  letter-spacing: -2% !important;
-  @apply text-[40px] lg:text-[56px] font-semibold;
+  @apply text-[40px] lg:text-[56px] -tracking-[0.8px] lg:-tracking-[0.112px] font-semibold;
 }
 
 .theme-h5 {
   line-height: 1 !important;
-  letter-spacing: -2% !important;
-  @apply text-[32px] lg:text-[40px] font-semibold;
+  @apply text-[32px] lg:text-[40px] -tracking-[0.64px] lg:-tracking-[0.8px] font-semibold;
 }
 
 .theme-h6 {
   line-height: 1 !important;
-  letter-spacing: -2% !important;
-  @apply text-[28px] lg:text-[32px] font-semibold;
+  @apply text-[28px] lg:text-[32px] -tracking-[0.56px] lg:-tracking-[0.64px] font-semibold;
 }
 
 .body-28 {
   line-height: 120% !important;
-  letter-spacing: 3% !important;
+  letter-spacing: 0.84px !important;
   font-size: 28px !important;
 }
 
 .body-22 {
   line-height: 130% !important;
-  letter-spacing: 2% !important;
+  letter-spacing: 0.44px !important;
   font-size: 22px !important;
 }
 
 .body-18 {
   line-height: 150% !important;
-  letter-spacing: 2% !important;
+  letter-spacing: 0.36px !important;
   font-size: 18px !important;
 }
 
 .body-16 {
   line-height: 150% !important;
-  letter-spacing: 2% !important;
+  letter-spacing: 0.32px !important;
   font-size: 16px !important;
 }
 
 .body-14 {
   line-height: 150% !important;
-  letter-spacing: 1% !important;
+  letter-spacing: 0.14px !important;
   font-size: 14px !important;
 }
 
 .body-12 {
   line-height: 150% !important;
-  letter-spacing: 1% !important;
+  letter-spacing: 0.12px !important;
   font-size: 12px !important;
 }

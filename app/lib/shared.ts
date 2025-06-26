@@ -16,3 +16,10 @@ export const navLinksArr = [
     url: "#",
   },
 ];
+
+export const socialLinksArr = [
+  { title: "INSTAGRAM", url: "#" },
+  { title: "BEHANCE", url: "#" },
+  { title: "TWITTER", url: "#" },
+  { title: "DRIBBBLE", url: "#" },
+];

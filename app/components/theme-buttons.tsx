@@ -14,8 +14,8 @@ export function ThemeButton({
 }) {
   const buttonStyles: { [key: string]: string } = {
     default:
-      "text-white bg-neutral-950 hover:bg-neutral-700 border-transparent",
-    outline: "border-current text-neutral-950 hover:bg-neutral-100",
+      "text-neutral-50 bg-neutral-950 hover:bg-neutral-700 border-transparent",
+    outline: "border-current hover:bg-neutral-100",
     secondary: "border-transparent bg-neutral-100 hover:bg-neutral-200",
   };
   return (
