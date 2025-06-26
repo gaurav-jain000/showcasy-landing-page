@@ -35,7 +35,7 @@ const testimonials = [
     content:
       "Ivan brought a rare mix of technical understanding and creative flair to our Django project. His designs improved user engagement noticeably, and his ability to iterate on feedback quickly kept our timelines on track.",
     client_avatar_url: "",
-    client_profession: "Product Manager at Django",
+    client_profession: "Manager at Django",
   },
   {
     client_name: "Lucas Meyer",
@@ -49,7 +49,7 @@ const testimonials = [
     content:
       "We were thoroughly impressed by Ivan's professionalism and eye for detail. His designs for Rackspace gave our platform a fresh, contemporary look while staying aligned with our brand identity.",
     client_avatar_url: "",
-    client_profession: "Creative Director at Rackspace",
+    client_profession: "Director at Rackspace",
   },
 ];
 
@@ -96,7 +96,7 @@ export function ThumbnailCarousel() {
       <Carousel
         setApi={setApi2}
         opts={{ loop: true, align: "center" }}
-        className="mask-l-from-80% mask-r-from-80%"
+        className="mask-l-from-80% mask-r-from-80% max-w-[550px]! mx-auto"
       >
         <CarouselContent>
           {testimonials
@@ -123,7 +123,7 @@ export function ThumbnailCarousel() {
                   }`}
                 >
                   <div
-                    className={`bg-neutral-300 rounded-full duration-400 size-48 ${
+                    className={`bg-neutral-300 rounded-full duration-400 size-16 ${
                       current === t_index + 1 ? "scale-100" : "scale-80"
                     }`}
                   />

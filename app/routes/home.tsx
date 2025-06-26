@@ -1,4 +1,4 @@
-import { RightArrowIcon } from "~/components/icons";
+import { RightArrowIcon, TopRightArrowIcon } from "~/components/icons";
 import type { Route } from "./+types/home";
 import { ThemeButton } from "~/components/theme-buttons";
 import {
@@ -197,8 +197,58 @@ export default function Home() {
         </Carousel>
       </section>
       {/* Testimonials */}
-      <section className="maximus uni-padding-y">
+      <section className="maximus uni-padding-y relative">
+        {/* <div className="absolute size-16 border-t-2 border-s-2 border-neutral-950 top-0 left-4 md:left-8"></div>
+        <div className="absolute size-16 border-b-2 border-e-2 border-neutral-950 bottom-0 right-4 md:right-8"></div> */}
         <ThumbnailCarousel />
+      </section>
+      {/* Awards & Recognition */}
+      <section className="maximus uni-padding-y grid md:grid-cols-3 max-md:gap-y-10">
+        <div className="flex flex-col justify-between">
+          <h2 className="theme-h5">
+            Awards & <br className="max-md:hidden" /> Recognition
+          </h2>
+          {/* <p className="body-14 text-neutral-400">
+            Started in 2020 and here <br /> I am now...
+          </p> */}
+        </div>
+        <div className="md:col-span-2 space-y-6">
+          {[
+            {
+              id: "ar-101",
+              title: "Honorable Mention",
+              desc: "2022 - Awwards",
+            },
+            {
+              id: "ar-102",
+              title: "Site of The Day",
+              desc: "2022 - CSS Winners",
+            },
+            {
+              id: "ar-103",
+              title: "Best UI Design",
+              desc: "2022 - CSS Design Awards",
+            },
+            {
+              id: "ar-104",
+              title: "Site of The Day",
+              desc: "2022 - Awwards",
+            },
+          ].map((ar) => (
+            <div
+              className="flex items-center justify-between border-b border-neutral-200 pb-6"
+              key={ar.id}
+            >
+              <div className="">
+                <h3 className="body-22 font-semibold">{ar.title}</h3>
+                <p className="body-18 text-neutral-700">{ar.desc}</p>
+              </div>
+              <ThemeButton className="" variant="secondary" withIcon={false}>
+                <TopRightArrowIcon className="" />
+              </ThemeButton>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
