@@ -1,6 +1,13 @@
 import { RightArrowIcon } from "~/components/icons";
 import type { Route } from "./+types/home";
 import { ThemeButton } from "~/components/theme-buttons";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "~/components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
+import { ThumbnailCarousel } from "~/components/thumbnail-carousel";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,6 +24,7 @@ export function loader({ context }: Route.LoaderArgs) {
 export default function Home() {
   return (
     <>
+      {/* Hero section */}
       <section className="maximus uni-padding-y gap-2 grid place-items-center">
         <div className="flex flex-col gap-2">
           <span className="body-28 font-medium">Hello, I&apos;m Ivan.</span>
@@ -36,6 +44,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Selected Works */}
       <section className="maximus uni-padding-y">
         <div className="flex items-center justify-between mb-9 w-full">
           <h2 className="theme-h5">Selected Works</h2>
@@ -96,6 +105,7 @@ export default function Home() {
           View All Works
         </ThemeButton>
       </section>
+      {/* About Me */}
       <section className="maximus uni-padding-y flex items-end">
         <div className="flex flex-col gap-8">
           <h2 className="theme-h2">
@@ -133,6 +143,62 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+      {/* Clients/Brands Logos Section */}
+      <section className="uni-padding-y">
+        <Carousel
+          plugins={[AutoScroll({ stopOnInteraction: false })]}
+          opts={{ loop: true }}
+        >
+          <CarouselContent className="-ml-6 lg:-ml-16">
+            {[
+              "/client-logos/Django.png",
+              "/client-logos/DojoToolkit.png",
+              "/client-logos/Pipefy.png",
+              "/client-logos/Portal.png",
+              "/client-logos/Rackspace.png",
+              "/client-logos/Teamwork.png",
+            ].map((client_logo) => (
+              <CarouselItem
+                key={client_logo}
+                className="pl-6 lg:pl-16 basis-1/3 md:basis-1/4 xl:basis-1/6"
+              >
+                <div className="size-full grid place-items-center">
+                  <img
+                    src={client_logo}
+                    alt={client_logo}
+                    className="h-18! w-auto! object-contain"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+            {[
+              "/client-logos/Django.png",
+              "/client-logos/DojoToolkit.png",
+              "/client-logos/Pipefy.png",
+              "/client-logos/Portal.png",
+              "/client-logos/Rackspace.png",
+              "/client-logos/Teamwork.png",
+            ].map((client_logo) => (
+              <CarouselItem
+                key={client_logo}
+                className="pl-6 lg:pl-16 basis-1/3 md:basis-1/4 xl:basis-1/6"
+              >
+                <div className="size-full grid place-items-center">
+                  <img
+                    src={client_logo}
+                    alt={client_logo}
+                    className="h-18! w-auto! object-contain"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </section>
+      {/* Testimonials */}
+      <section className="maximus uni-padding-y">
+        <ThumbnailCarousel />
       </section>
     </>
   );

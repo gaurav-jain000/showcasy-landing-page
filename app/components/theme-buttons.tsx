@@ -20,7 +20,7 @@ export function ThemeButton({
   };
   return (
     <button
-      className={`rounded-full py-[1em] whitespace-nowrap px-[1.8em] flex items-center justify-center cursor-pointer border group duration-300 ${className} ${buttonStyles[variant]}`}
+      className={`rounded-full py-[1em] whitespace-nowrap px-[1.8em] flex items-center justify-center cursor-pointer border-[2px] group duration-300 ${className} ${buttonStyles[variant]}`}
       {...props}
     >
       {children}
