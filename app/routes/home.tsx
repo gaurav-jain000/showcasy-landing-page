@@ -308,6 +308,39 @@ export default function Home() {
           View All Insights
         </ThemeButton>
       </section>
+      {/* Let's rock together section */}
+      <section className="uni-padding-y border-t border-neutral-200">
+        <div className="maximus flex flex-col gap-6 items-center text-center">
+          <span className="body-28 font-medium">Have an Idea?</span>
+          <h2 className="theme-h1">
+            Let&apos;s rock <span className="text-neutral-400">together</span>
+          </h2>
+          <div className="flex items-center gap-10 max-w-fit pt-8">
+            {[
+              {
+                title: "ABOUT ME",
+                url: "/",
+              },
+              {
+                title: "WORKS",
+                url: "/",
+              },
+              {
+                title: "INSIGHTS",
+                url: "/",
+              },
+            ].map((link) => (
+              <Link
+                to={link.url}
+                key={link.title}
+                className="underline body-14 font-medium hover:text-neutral-400 duration-300"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
