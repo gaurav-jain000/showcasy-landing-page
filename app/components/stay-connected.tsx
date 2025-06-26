@@ -1,9 +1,14 @@
+import { popUpAnimationVariant } from "~/lib/animations";
 import { TopRightArrowIcon } from "./icons";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
 export default function StayConnected({ className }: { className?: string }) {
   return (
-    <div className={`flex flex-col gap-2 sm:gap-4 ${className}`}>
+    <motion.div
+      variants={popUpAnimationVariant}
+      className={`flex flex-col gap-2 sm:gap-4 ${className}`}
+    >
       <h3 className="body-22 text-neutral-500 font-semibold">
         Stay connected w/ me.
       </h3>
@@ -23,6 +28,6 @@ export default function StayConnected({ className }: { className?: string }) {
           </Button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }

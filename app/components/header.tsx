@@ -20,6 +20,12 @@ import { navLinksArr, socialLinksArr } from "~/lib/shared";
 import { useState } from "react";
 import { Separator } from "./ui/separator";
 import StayConnected from "./stay-connected";
+import { motion } from "framer-motion";
+import {
+  popUpAnimationVariant,
+  slideLeftAnimationVariant,
+  slideUpAnimationVariant,
+} from "~/lib/animations";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,12 +71,20 @@ export default function Header() {
                 </ThemeButton>
               </DrawerTrigger>
             )}
-            <DrawerContent className="data-[vaul-drawer-direction=top]:max-h-[100vh] h-screen rounded-none! bg-neutral-950 z-10!">
-              <div className="maximus mx-auto w-full mt-20 lg:mt-30 grow flex flex-col gap-4 sm:gap-10 justify-between h-full 2xl:max-h-[777px]!">
+            <DrawerContent className="data-[vaul-drawer-direction=top]:max-h-[100vh] h-screen! rounded-none! [animation-duration:700ms]! bg-neutral-950 z-10!">
+              <motion.div
+                variants={slideLeftAnimationVariant}
+                initial="initial"
+                animate="animate"
+                className="maximus mx-auto w-full mt-20 lg:mt-30 grow flex flex-col gap-4 sm:gap-10 justify-between h-full 2xl:max-h-[777px]!"
+              >
                 <Separator className="bg-neutral-800" />
                 <ul className="flex flex-col gap-4 sm:gap-8 justify-between grow">
                   {navLinksArr.map((link, link_index) => (
-                    <li key={link.title}>
+                    <motion.li
+                      key={link.title}
+                      variants={slideLeftAnimationVariant}
+                    >
                       <DrawerClose asChild>
                         <Link
                           to={link.url}
@@ -95,12 +109,15 @@ export default function Header() {
                           </ThemeButton>
                         </Link>
                       </DrawerClose>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
                 <Separator className="bg-neutral-800" />
                 <DrawerFooter className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-40 px-0! py-0 sm:pb-4 grow">
-                  <div className="flex flex-col gap-2 sm:gap-4 2xl:justify-between lg:col-span-2">
+                  <motion.div
+                    variants={popUpAnimationVariant}
+                    className="flex flex-col gap-2 sm:gap-4 2xl:justify-between lg:col-span-2"
+                  >
                     <h3 className="body-22 text-neutral-500 font-semibold">
                       Follow me.
                     </h3>
@@ -114,6 +131,7 @@ export default function Header() {
                           >
                             <a
                               href={link.url}
+                              className="block"
                               target="_blank"
                               rel="noopener noreferrer me"
                             >
@@ -124,14 +142,14 @@ export default function Header() {
                         </DrawerClose>
                       ))}
                     </div>
-                  </div>
+                  </motion.div>
                   <StayConnected className="2xl:justify-between max-sm:pb-2" />
                 </DrawerFooter>
-              </div>
+              </motion.div>
             </DrawerContent>
           </div>
         </header>
-        <DrawerPortal />
+        {/* <DrawerPortal /> */}
         <DrawerOverlay className="hidden z-10!" />
       </Drawer>
     </>
