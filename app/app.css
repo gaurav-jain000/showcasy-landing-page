@@ -150,7 +150,7 @@ body {
 
 .theme-h1 {
   line-height: 1 !important;
-  @apply text-[58.5px] lg:text-[104px] -tracking-[0.117px] lg:-tracking-[0.208px] font-bold;
+  @apply text-[58.5px] lg:text-[104px] -tracking-[0.117px] lg:-tracking-[0.208px] font-bold [@media_(height_<=_600px)]:text-[64px]!;
 }
 
 .theme-h2 {

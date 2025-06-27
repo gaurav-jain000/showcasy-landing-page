@@ -6,7 +6,11 @@ import {
   type CarouselApi,
 } from "./ui/carousel";
 import Fade from "embla-carousel-fade";
-import Autoplay from "embla-carousel-autoplay";
+import { motion } from "framer-motion";
+import {
+  popUpAnimationVariant,
+  slideUpAnimationVariant,
+} from "~/lib/animations";
 
 const testimonials = [
   {
@@ -87,14 +91,22 @@ export function ThumbnailCarousel() {
         plugins={[Fade()]}
         opts={{ loop: true, align: "center" }}
       >
-        <CarouselContent>
+        <CarouselContent className="py-4">
           {testimonials
             .map((testimonial) => testimonial.content)
             .map((testimonial_content) => (
               <CarouselItem key={testimonial_content}>
-                <p className="body-22 text-center max-sm:line-clamp-5">
+                <motion.p
+                  key={"testimonial-" + current}
+                  variants={popUpAnimationVariant}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ margin: "-150px 0px -150px 0px" }}
+                  exit="exit"
+                  className="body-22 text-center max-sm:line-clamp-5 text-balance"
+                >
                   {testimonial_content}
-                </p>
+                </motion.p>
               </CarouselItem>
             ))}
         </CarouselContent>
@@ -129,7 +141,7 @@ export function ThumbnailCarousel() {
                   }`}
                 >
                   <div
-                    className={`bg-neutral-300 rounded-full duration-400 size-16 overflow-hidden ${
+                    className={`bg-neutral-300 rounded-full duration-400 size-16 2xl:size-20 overflow-hidden ${
                       current === t_index + 1 ? "scale-100" : "scale-80"
                     }`}
                   >

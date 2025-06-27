@@ -14,6 +14,10 @@ export const slideUpAnimationVariant: Variants = {
     opacity: 1,
     y: 0,
   },
+  exit: {
+    opacity: 0,
+    y: -30,
+  },
 };
 
 export const slideLeftAnimationVariant: Variants = {
@@ -29,6 +33,10 @@ export const slideLeftAnimationVariant: Variants = {
     },
     opacity: 1,
     x: 0,
+  },
+  exit: {
+    opacity: 0,
+    x: -20,
   },
 };
 
@@ -47,5 +55,10 @@ export const popUpAnimationVariant: Variants = {
     opacity: 1,
     scale: 1,
     y: 0,
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 0.85,
   },
 };

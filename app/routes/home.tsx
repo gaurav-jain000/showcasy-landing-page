@@ -208,6 +208,9 @@ export default function Home() {
               (skill) => (
                 <motion.li
                   variants={slideUpAnimationVariant}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ margin: "-100px 0px -100px 0px" }}
                   key={skill}
                   className="text-neutral-500 whitespace-nowrap even:text-end"
                 >
