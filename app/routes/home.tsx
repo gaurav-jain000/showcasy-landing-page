@@ -15,6 +15,7 @@ import {
   slideLeftAnimationVariant,
   slideUpAnimationVariant,
 } from "~/lib/animations";
+import TextResurface from "~/components/text-resurface";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -37,24 +38,19 @@ export default function Home() {
         initial="initial"
         whileInView="animate"
         viewport={{ margin: "-200px 0px -200px 0px" }}
-        className="maximus uni-padding-y gap-2 grid place-items-center"
+        className="maximus uni-padding-y gap-2 grid place-items-center isolate"
       >
         <div className="flex flex-col gap-2">
           <span className="body-28 font-medium">Hello, I&apos;m Ivan.</span>
           <h1 className="theme-h1 flex-wrap gap-x-[1em] font-bold">
-            Designing digital product with emphasis on{" "}
-            <motion.span
-              variants={slideLeftAnimationVariant}
-              className=" text-neutral-400 inline-block"
-            >
+            Designing <TextResurface>digital</TextResurface> product with{" "}
+            <TextResurface delay={0.2}>emphasis</TextResurface> on{" "}
+            <TextResurface className="text-neutral-400" delay={0.4}>
               visual
-            </motion.span>{" "}
-            <motion.span
-              variants={slideLeftAnimationVariant}
-              className=" text-neutral-400 inline-block"
-            >
+            </TextResurface>{" "}
+            <TextResurface className="text-neutral-400" delay={0.6}>
               design
-            </motion.span>
+            </TextResurface>
           </h1>
           <div className="flex sm:items-end justify-between gap-6 pt-4 md:pt-8 max-sm:flex-col-reverse">
             <motion.div

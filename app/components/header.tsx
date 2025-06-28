@@ -1,11 +1,6 @@
 import { Link } from "react-router";
 import { Button } from "./ui/button";
-import {
-  CrossIcon,
-  RightArrowIcon,
-  MenuIcon,
-  TopRightArrowIcon,
-} from "./icons";
+import { RightArrowIcon, MenuIcon, TopRightArrowIcon } from "./icons";
 import { ThemeButton } from "./theme-buttons";
 import {
   Drawer,
@@ -13,7 +8,6 @@ import {
   DrawerContent,
   DrawerFooter,
   DrawerOverlay,
-  DrawerPortal,
   DrawerTrigger,
 } from "./ui/drawer";
 import { navLinksArr, socialLinksArr } from "~/lib/shared";
@@ -26,6 +20,7 @@ import {
   slideLeftAnimationVariant,
   slideUpAnimationVariant,
 } from "~/lib/animations";
+import { Crosshair, CrossIcon, LucideCross, PlusIcon } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,7 +52,7 @@ export default function Header() {
                   variant="outline"
                   withIcon={false}
                 >
-                  <CrossIcon className="duration-300" />
+                  <PlusIcon className="duration-300 rotate-45 size-[1.6em]" />
                 </ThemeButton>
               </DrawerClose>
             ) : (

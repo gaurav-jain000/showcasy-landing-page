@@ -1,4 +1,5 @@
 import { RightArrowIcon } from "./icons";
+import { motion } from "framer-motion";
 
 export function ThemeButton({
   children,
@@ -19,16 +20,16 @@ export function ThemeButton({
     secondary: "border-transparent bg-neutral-100 hover:bg-neutral-200",
   };
   return (
-    <button
-      className={`rounded-full py-[1em] whitespace-nowrap px-[1.8em] flex items-center justify-center cursor-pointer border-[2px] group duration-300 ${className} ${buttonStyles[variant]}`}
-      {...props}
+    <motion.button
+      className={`rounded-full py-[1em] whitespace-nowrap px-[1.8em] flex items-center justify-center gap-3 cursor-pointer border-[2px] group duration-300 ${className} ${buttonStyles[variant]}`}
+      // {...props}
     >
       {children}
       {withIcon ? (
         <RightArrowIcon
-          className={`ms-2 group-hover:ms-4 group-hover:-rotate-45 origin-top duration-300 size-[1.4em]!`}
+          className={`group-hover:-rotate-45 duration-300 size-[1.4em]!`}
         />
       ) : null}
-    </button>
+    </motion.button>
   );
 }
