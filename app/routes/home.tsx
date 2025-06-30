@@ -128,10 +128,12 @@ export default function Home() {
               className="flex flex-col gap-5"
               key={work.title}
             >
-              <div className="aspect-[1.28/1] lg:aspect-[2.06/1] bg-gradient-to-br from-neutral-100 to-neutral-200 w-full rounded-2xl overflow-hidden">
+              <div className="aspect-[1.28/1] lg:aspect-[2.06/1] w-full rounded-2xl overflow-hidden">
                 <img
                   src={work.featured_img_url}
                   alt={work.title}
+                  width={1920}
+                  height={1080}
                   className="size-full object-cover"
                 />
               </div>
